@@ -257,3 +257,30 @@ button{
     opacity: 1;
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.steps{
+    background: var(--color-gradient);
+    height: 100vh;
+    padding: 12rem 6rem;
+}
+
+.steps .swiper-pagination{
+    position: relative;
+    text-align: left;
+    display: flex;
+}
+
+.steps-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
