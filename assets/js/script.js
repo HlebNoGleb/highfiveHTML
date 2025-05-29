@@ -10,4 +10,5 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-window.hf.components.tabs.init();
+window.hf.components.tabs.init(".tabs1");
+window.hf.components.tabs.init(".tabs2");

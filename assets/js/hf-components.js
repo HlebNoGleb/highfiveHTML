@@ -1,8 +1,8 @@
 // tabs
-function initTabs() {
-  const tabsContainer = document.querySelector('[data-hf-tabs]');
-  const buttonsContainer = document.querySelector('[data-hf-tabs-buttons]');
-  const contentContainer = document.querySelector('[data-hf-tabs-content]');
+function initTabs(selector) {
+  const tabsContainer = document.querySelector(selector);
+  const buttonsContainer = tabsContainer.querySelector('[data-hf-tabs-buttons]');
+  const contentContainer = tabsContainer.querySelector('[data-hf-tabs-content]');
 
   if (!tabsContainer || !buttonsContainer || !contentContainer) {
     return;
