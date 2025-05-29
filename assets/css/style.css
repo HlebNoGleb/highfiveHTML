@@ -117,7 +117,7 @@ button{
 }
 
 .gradient-button::before{
-    content: url("../images/icons/button_arrow__white.svg");;
+    content: url("/assets/images/icons/button_arrow__white.svg");
     position: absolute;
     right: 0.4rem;
     top: 54%;
@@ -166,7 +166,7 @@ button{
 }
 
 .transparent-button::before{
-    content: url("../images/icons/button_arrow__gradient.svg");;
+    content: url("/assets/images/icons/button_arrow__gradient.svg");;
     position: absolute;
     right: 0.4rem;
     top: 54%;
@@ -227,7 +227,7 @@ button{
 }
 
 .link-button::before{
-    content: url("../images/icons/button_arrow__main.svg");;
+    content: url("/assets/images/icons/button_arrow__main.svg");;
     position: absolute;
     right: 0;
     top: 54%;
