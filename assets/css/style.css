@@ -28,6 +28,19 @@ body {
     --text-3: 1.2rem;
 }
 
+@media(max-width: 767px) {
+    :root {
+        --h1: 3rem;
+        --h2: 2rem;
+        --h3: 1.5rem;
+        --h4: 1.4rem;
+        --h5: 1.1rem;
+        --h6: 1rem;
+        --button-font-size: 1rem;
+        --text-3: 1rem;
+    }
+}
+
 h1 {
     font-family: "Wix Madefor Text", sans-serif;
     font-weight: 900;
@@ -282,7 +295,7 @@ h6 {
 
 .steps {
     min-height: 90vh;
-    padding: 12rem 6rem;
+    padding: 200px 100px;
     border-radius: 37px;
     margin: 0 20px;
     background-position: bottom;
@@ -296,7 +309,7 @@ h6 {
 .steps p{
     color: #fff;
     margin-bottom: 32px;
-    font-size: var(--);
+    font-size: var(--text-3);
 }
 
 .steps .button{
@@ -313,12 +326,13 @@ h6 {
     position: relative;
     text-align: left;
     display: flex;
+    flex-wrap: wrap;
     top: 0;
     bottom: 0;
     background-color: rgb(255, 255, 255, 0.15);
     border-radius: 17px;
     padding: 6px;
-    width: max-content;
+    width: fit-content;
 }
 
 .steps .swiper-pagination.swiper-pagination-bullets-dynamic{
@@ -343,7 +357,7 @@ h6 {
 
 .steps .swiper-pagination-bullet .num {
     color: rgb(255, 255, 255, 0.5);
-    font-size: var(--text3);
+    font-size: var(--text-3);
     line-height: 1;
     transition: .3s all ease;
     user-select: none;
@@ -390,13 +404,6 @@ h6 {
     gap: 20px;
 }
 
-@media (max-width: 1200px) {
-    .steps-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 .steps .card{
     width: 560px;
     height: 500px;
@@ -404,7 +411,7 @@ h6 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 2rem;
+    padding: 30px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -414,7 +421,55 @@ h6 {
 
 .steps .card p{
     margin-top: 15px;
-    font-size: var(--text3);
+    font-size: var(--text-3);
     font-weight: 500;
     color: #000;
+}
+
+@media (max-width: 1200px) {
+    .steps {
+        background-position: bottom right;
+        padding: 100px 50px;
+    }
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .steps {
+        padding: 60px 20px 20px 20px;
+    }
+    .steps .swiper{
+        width: 100% !important;
+    }
+    .steps .card{
+        width: 100%;
+        padding: 15px;
+        height: 350px;
+    }
+
+    .steps .swiper-pagination-bullet{
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .steps .swiper-pagination-bullet:hover .num {
+        color: rgb(255, 255, 255, 0.7);
+        transform: scale(1.1);
+    }
+
+    .steps .swiper-pagination-bullet:hover .dot {
+        background-color: rgb(255, 255, 255, 0.7);
+        transform: scale(1.5);
+    }
+
+    .steps .swiper-pagination-bullet.swiper-pagination-bullet-active .num{
+        transform: scale(1.1);
+    }
+
+     .steps .swiper-pagination-bullet.swiper-pagination-bullet-active .dot{
+        transform: scale(1.5);
+    }
 }
