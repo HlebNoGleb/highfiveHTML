@@ -1,0 +1,7 @@
+[data-hf-tab]{
+    display: none;
+}
+
+[data-hf-tab="active"]{
+    display: block;
+}

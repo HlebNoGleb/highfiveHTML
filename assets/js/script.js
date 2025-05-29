@@ -9,3 +9,5 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+window.hf.components.tabs.init();
