@@ -5,3 +5,11 @@
 [data-hf-tab="active"]{
     display: block;
 }
+
+[data-hf-accordion-item-body]{
+    display: none;
+}
+
+[data-hf-accordion-item="active"] [data-hf-accordion-item-body]{
+    display: block;
+}

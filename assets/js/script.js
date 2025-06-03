@@ -10,5 +10,16 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-window.hf.components.tabs.init(".tabs1");
-window.hf.components.tabs.init(".tabs2");
+window.hf.components.tabs.init(".tabs1", {
+  openFirst: true
+});
+
+window.hf.components.accordion.init(".accordion1", {
+  closeOthers: true,
+  openFirst: true
+});
+
+window.hf.components.accordion.init(".accordion2", {
+  closeOthers: true,
+  openFirst: true
+});
