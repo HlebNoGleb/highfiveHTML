@@ -1,21 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Wix+Madefor+Text:wght@400..800&display=swap');
-
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-Light'), local('Onest-Light'),
+    url('../fonts/Onest/Onest-Light.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-Light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-Regular'), local('Onest-Regular'),
+    url('../fonts/Onest/Onest-Regular.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-Regular.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-Medium'), local('Onest-Medium'),
+    url('../fonts/Onest/Onest-Medium.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-Medium.woff') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-SemiBold'), local('Onest-SemiBold'),
+    url('../fonts/Onest/Onest-SemiBold.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-SemiBold.woff') format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-Bold'), local('Onest-Bold'),
+    url('../fonts/Onest/Onest-Bold.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-Bold.woff') format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Onest';
+  src: local('Onest-Black'), local('Onest-Black'),
+    url('../fonts/Onest/Onest-Black.woff2') format('woff2'),
+    url('../fonts/Onest/Onest-Black.woff') format('woff');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Wix Madefor Text';
+  src: local('Wix Madefor Text Bold'), local('Wix Madefor Text Bold'),
+    url('../fonts/WixMadeforText/WixMadeforText-Bold.woff2') format('woff2'),
+    url('../fonts/WixMadeforText/WixMadeforText-Bold.woff') format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Wix Madefor Text';
+  src: local('Wix Madefor Text ExtraBold'), local('Wix Madefor Text ExtraBold'),
+    url('../fonts/WixMadeforText/WixMadeforText-ExtraBold.woff2')
+      format('woff2'),
+    url('../fonts/WixMadeforText/WixMadeforText-ExtraBold.woff') format('woff');
+  font-weight: 900;
+}
+:root {
+  --ff-primary: 'Onest', sans-serif;
+  --ff-secondary: 'Wix Madefor Text', sans-serif;
+  --white: #fff;
+  --black: #000;
+  --light: #f9f9f9;
+  --gray: #666;
+  --dark-gray: #575757;
+  --orange: #ff4409;
+  --color-gradient: linear-gradient(
+      275deg,
+      #f6d5ab -18.6%,
+      #e56805 37.68%,
+      #cf3c0b 73.01%,
+      #611e1a 104.36%
+    ),
+    linear-gradient(93.77deg, #ff4207 4.43%, #ffb38d 98.86%);
+  --border-gradient: linear-gradient(90deg, #ff4207 4.43%, #ffb38d 98.86%);
+  --fs-1: 4.6rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.5rem;
+  --fs-4: 1.6rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.4rem;
+  --button-fs: 1.6rem;
+  --text-fs: 1.6rem;
+  --transition: all 300ms ease;
+}
+@media (min-width: 767px) {
+  :root {
+    --fs-1: 9.6rem;
+    --fs-2: 6.4rem;
+    --fs-3: 4rem;
+    --fs-4: 3.2rem;
+    --fs-5: 1.8rem;
+    --fs-6: 1.6rem;
+    --button-fs: 1.8rem;
+    --text-fs: 1.8rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
 }
-
+html {
+  font-size: 62.5%;
+}
+html,
 body {
-  font-family: 'Onest', sans-serif;
-  font-size: 16px;
-  background-color: #ccc;
-  line-height: 1;
+  /* height: 100%; */
 }
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: var(--text-fs);
+  line-height: 1.2;
+  color: var(--black);
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+header {
+  background: var(--gray);
+}
+main {
+  flex: 1;
+}
+footer {
+  background: var(--gray);
+}
+/* START HERO */
+.hero {
+  position: relative;
+  padding: 100px 0;
+}
+.hero .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  bottom: -100%;
+  /* bottom: -50%;
+  width: 300%;
+  max-width: none;
+  left: 50%;
+  transform: translate(-50%); */
+}
+.hero .subtitle {
+  color: var(--black);
+  font-family: var(--ff-secondary);
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero .text {
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+/* END HERO */
 
-:root {
-  --h1: 6rem;
+/* :root {
+  --h1: 9.6rem;
   --h2: 4rem;
   --h3: 2.5rem;
   --h4: 2.4rem;
@@ -33,9 +188,9 @@ body {
   --button-font-size: 1.13rem;
   --color-main: #ff4409;
   --text-3: 1.2rem;
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   :root {
     --h1: 3rem;
     --h2: 2rem;
@@ -46,37 +201,37 @@ body {
     --button-font-size: 1rem;
     --text-3: 1rem;
   }
-}
+} */
 
 h1 {
-  font-family: 'Wix Madefor Text', sans-serif;
+  font-family: var(--ff-secondary);
   font-weight: 900;
-  font-size: var(--h1);
+  font-size: var(--fs-1);
 }
 
 h2 {
   font-weight: 600;
-  font-size: var(--h2);
+  font-size: var(--fs-2);
 }
 
 h3 {
   font-weight: 700;
-  font-size: var(--h3);
+  font-size: var(--fs-3);
 }
 
 h4 {
   font-weight: 600;
-  font-size: var(--h4);
+  font-size: var(--fs-4);
 }
 
 h5 {
   font-weight: 600;
-  font-size: var(--h5);
+  font-size: var(--fs-5);
 }
 
 h6 {
   font-weight: 400;
-  font-size: var(--h6);
+  font-size: var(--fs-6);
 }
 
 .gradient-text {
@@ -89,14 +244,15 @@ h6 {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 1rem 2rem;
-  font-size: var(--button-font-size);
+  padding: 18px 30px;
+  font-size: var(--button-fs);
   border-radius: 50px;
-  font-family: 'Onest', sans-serif;
+  font-family: var(--ff-primary);
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  transition: 0.5s all ease;
+  transition: var(--transition);
+  line-height: 1;
   display: inline-block;
 }
 
@@ -106,13 +262,13 @@ h6 {
   }
 
   50% {
-    transform: translate(1.1rem, -50%);
+    transform: translate(50%, -50%);
     opacity: 0;
     z-index: -1;
   }
 
   51% {
-    transform: translate(-1.3rem, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
   }
 
@@ -125,7 +281,7 @@ h6 {
 .gradient-button {
   background: var(--color-gradient);
   color: #fff;
-  padding: 1rem 4rem 1rem 2rem;
+  padding: 18px 60px 18px 40px;
   background-size: 100%;
   background-position: 0 0;
 }
@@ -133,34 +289,33 @@ h6 {
 .gradient-button::after {
   content: '';
   position: absolute;
-  right: 0.5rem;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--button-font-size);
   overflow: hidden;
 }
 
 .gradient-button::before {
   content: url('/assets/images/icons/button_arrow__white.svg');
   position: absolute;
-  right: 0.4rem;
-  top: 54%;
+  right: 5px;
+  top: 50%;
   transform: translateY(-50%);
-  height: 100%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--button-font-size);
   z-index: 1;
+  line-height: 1;
 }
 
 .gradient-button:hover::before {
@@ -171,6 +326,34 @@ h6 {
   background-size: 400%;
 }
 
+.border-button {
+  background-color: transparent;
+  color: var(--orange);
+  border-radius: 50px;
+}
+
+.border-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: var(--border-gradient) border-box;
+  -webkit-mask: linear-gradient(var(--orange) 0 0) padding-box,
+    linear-gradient(var(--orange) 0 0);
+  -webkit-mask-composite: destination-out;
+  background-position: right;
+  background-size: 100%;
+  transition: var(--transition);
+}
+
+.border-button:hover::before {
+  background-position: left;
+  background-size: 300%;
+}
 .transparent-button {
   background: transparent;
   color: #fff;
@@ -220,38 +403,9 @@ h6 {
   animation: button-arrow 0.5s forwards;
 }
 
-.border-button {
-  background-color: transparent;
-  color: var(--color-main);
-  border-radius: 50px;
-}
-
-.border-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50px;
-  border: 2px solid transparent;
-  background: var(--border-gradient) border-box;
-  -webkit-mask: linear-gradient(var(--color-main) 0 0) padding-box,
-    linear-gradient(var(--color-main) 0 0);
-  -webkit-mask-composite: destination-out;
-  background-position: right;
-  background-size: 100%;
-  transition: 0.3s all ease;
-}
-
-.border-button:hover::before {
-  background-position: left;
-  background-size: 300%;
-}
-
 .link-button {
   background-color: transparent;
-  color: var(--color-main);
+  color: var(--orange);
   padding: 0 1rem 0 0;
   transition: 0.3s all ease;
   overflow: visible;
@@ -268,7 +422,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--button-font-size);
+  font-size: var(--button-fs);
   z-index: 1;
 }
 
@@ -278,7 +432,7 @@ h6 {
   bottom: 0rem;
   width: 105%;
   height: 2px;
-  background-color: var(--color-main);
+  background-color: var(--orange);
   transition: 0.3s all ease;
   left: -5%;
   opacity: 0;
@@ -289,8 +443,9 @@ h6 {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .row {
@@ -314,7 +469,7 @@ h6 {
 .steps p {
   color: #fff;
   margin-bottom: 32px;
-  font-size: var(--text-3);
+  font-size: var(--text-fs);
 }
 
 .steps .button {
@@ -447,6 +602,7 @@ h6 {
 .form-content > p {
   color: #666666;
   margin: 10px 0 40px;
+  line-height: 1.2;
 }
 form {
   display: flex;
@@ -479,7 +635,6 @@ form input::placeholder {
   font-size: 1.125rem;
   font-weight: 400;
 }
-
 form input:focus {
   border: 2px solid #ffb404;
   background: rgba(255, 180, 4, 0.08);
