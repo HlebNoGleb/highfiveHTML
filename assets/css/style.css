@@ -835,6 +835,12 @@ form input:focus {
   margin-bottom: 10px;
   line-height: 1;
   overflow: hidden;
+  color: rgba(0,0,0,.2);
+}
+
+.scale-accordion .accordion-item[data-hf-accordion-item="active"]  .accordion-item-header {
+  color: rgba(0,0,0,1);
+  padding: 40px 30px;
 }
 
 .scale-accordion .accordion-item-header-row {
@@ -850,6 +856,7 @@ form input:focus {
   visibility: hidden;
   opacity: 0;
   transition: .3s all ease;
+  height: 0px;
 }
 
 .scale-accordion .accordion-item[data-hf-accordion-item="active"] .accordion-item-header .accordion-item-text {
@@ -857,14 +864,12 @@ form input:focus {
   font-weight: 300;
   visibility: visible;
   opacity: 1;
+  height: auto;
 }
 
 .scale-accordion .accordion-item-header .accordion-item-count {
   font-weight: 300;
-  transform: translateY(-200%) scale(13);
-  opacity: .3;
-  color: var(--black);
-  /* transform-origin: top left; */
+  transform: translateY(-200%) scale(8);
   transition: .3s all ease;
   text-align: center;
   transform-origin: top center;
@@ -872,7 +877,7 @@ form input:focus {
 
 .scale-accordion .accordion-item[data-hf-accordion-item="active"]  .accordion-item-header .accordion-item-count {
   font-weight: 600;
-  transform: translateY(0%) scale(4);
+  transform: translateY(-20%) scale(4);
   opacity: 1;
   background: var(--color-gradient);
   -webkit-background-clip: text;
