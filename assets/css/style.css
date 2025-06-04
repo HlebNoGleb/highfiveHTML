@@ -81,6 +81,7 @@
   --fs-4: 1.6rem;
   --fs-5: 1.6rem;
   --fs-6: 1.4rem;
+  --fs-7: 1.4rem;
   --button-fs: 1.6rem;
   --text-fs: 1.6rem;
   --transition: all 300ms ease;
@@ -91,8 +92,9 @@
     --fs-2: 6.4rem;
     --fs-3: 4rem;
     --fs-4: 3.2rem;
-    --fs-5: 1.8rem;
+    --fs-5: 2.4rem;
     --fs-6: 1.6rem;
+    --fs-7: 1.4rem;
     --button-fs: 1.8rem;
     --text-fs: 1.8rem;
   }
@@ -455,6 +457,11 @@ h6 {
   flex-wrap: wrap;
 }
 
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
 .steps {
   height: calc(100vh - 40px);
   border-radius: 37px;
@@ -462,6 +469,7 @@ h6 {
   background-position: bottom;
   display: flex;
   align-items: center;
+  background-size: cover;
 }
 
 .steps h2 {
@@ -883,4 +891,243 @@ form input:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform-origin: top center;
+}
+
+/* packages */
+.packages .packages-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.packages .tabs-buttons{
+  display: grid;
+  gap: 10px;
+}
+
+.packages .tabs-buttons .tab-button{
+  background: var(--white);
+  border-radius: 22px;
+  padding: 40px 40px 40px 100px;
+  cursor: pointer;
+  transition: 0s all ease;
+  text-align: left;
+}
+
+.packages .tabs-buttons .tab-button:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 4px solid var(--black);
+  border-radius: 50%;
+  /* transition: .3s all ease; */
+}
+
+.packages .tabs-buttons .tab-button:after{
+  /* content: url('/assets/images/icons/check__gradient.svg');
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 43px;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.packages .tabs-buttons .tab-button[data-hf-tabs-button="active"]{
+  background: var(--color-gradient);
+  color: var(--white);
+}
+
+.packages .tabs-buttons .tab-button[data-hf-tabs-button="active"]:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background: var(--white);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+}
+
+.packages .tabs-buttons .tab-button[data-hf-tabs-button="active"]:after{
+  content: url('/assets/images/icons/check__gradient.svg');
+  position: absolute;
+  top: 51%;
+  transform: translateY(-50%);
+  left: 42px;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.packages .tabs-buttons .tab-button .row .col:nth-child(1){
+  margin-right: 30px;
+  justify-content: center;
+}
+
+.packages .tabs-buttons .tab-button .package-name{
+  font-size: var(--fs-5);
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+    transition: 0s all ease;
+}
+
+.packages .tabs-buttons .tab-button[data-hf-tabs-button="active"] .package-name{
+  background: var(--white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.packages .tabs-buttons .tab-button .package-description{
+  font-size: var(--fs-7);
+  min-width: 200px;
+}
+
+.packages .tabs-buttons .tab-button .package-price{
+  font-size: var(--fs-4);
+  font-weight: 600;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+    transition: 0s all ease;
+}
+
+.packages .tabs-buttons .tab-button[data-hf-tabs-button="active"] .package-price{
+  background: var(--white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.packages .tabs-buttons .tab-button .package-price__alt{
+  font-size: var(--fs-5);
+}
+
+.packages .package-info{
+  flex-grow: 1;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  background-size: 180%;
+  background-position: bottom;
+  position: relative;
+  overflow: hidden;
+}
+
+.packages .package-info::after{
+  position:absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(360deg, #AC2A0A -36.37%, rgba(185, 50, 12, 0) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.packages .package-info .package-info__list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  margin: 70px 70px 0 70px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.packages .package-info .package-info__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.packages .package-info .package-info__list::-webkit-scrollbar-track {
+  background: rgba(255,255,255,.2);
+  border-radius: 10px;
+}
+
+/* Handle */
+.packages .package-info .package-info__list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.5);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.packages .package-info .package-info__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,.7);
+}
+
+.packages .tabs-content .tab, .packages .tabs-content .tab .col{
+  height: 100%;
+}
+
+.packages .package-info .package-info__list li{
+  border-bottom: 2px solid var(--white);
+  font-size: var(--text-3);
+  color: var(--white);
+  background: transparent;
+  padding: 10px 50px 10px 10px;
+  position: relative;
+}
+
+.packages .package-info .package-info__list li.active{
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.packages .package-info .package-info__list li:nth-last-child(n+2){
+  margin-bottom: 20px;
+}
+
+.packages .package-info .package-info__list li:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--orange);
+}
+
+.packages .package-info .package-info__list li:before{
+  content: url('/assets/images/icons/cross__white.svg');
+  position: absolute;
+  top: calc(50% - 2px);
+  transform: translateY(-50%);
+  right:10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.packages .package-info .package-info__list li.active:after{
+  background-color: var(--white);
+}
+
+.packages .package-info .package-info__list li.active:before{
+  content: url('/assets/images/icons/check__green.svg');
 }
