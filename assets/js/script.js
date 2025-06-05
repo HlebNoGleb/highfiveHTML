@@ -23,3 +23,7 @@ window.hf.components.accordion.init(".accordion2", {
   closeOthers: true,
   openFirst: true
 });
+
+window.hf.components.tabs.init(".packages", {
+  openFirst: true
+});
