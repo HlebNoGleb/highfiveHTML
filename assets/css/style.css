@@ -1131,3 +1131,66 @@ form input:focus {
 .packages .package-info .package-info__list li.active:before{
   content: url('/assets/images/icons/check__green.svg');
 }
+
+/* cases */
+
+.cases-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.case{
+  background: var(--white);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 50px 20px 20px 20px;
+}
+
+.cases-margin{
+  margin-bottom: 100px;
+}
+
+.cases-margin .case:nth-child(even){
+  transform: translateY(100px);
+}
+
+.case h3{
+  font-size: var(--fs-3);
+  margin-bottom: 28px;
+  max-width: min(100%, 350px);
+}
+
+.case h3, .case .case-tags{
+  padding: 0 30px;
+}
+
+.case-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 50px;
+}
+
+.case-tags li{
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: rgba(255, 68, 9, 0.1); /* default value, change from html */
+  color: rgba(255, 68, 9, 1); /* default value, change from html */
+}
+
+.case .case-image{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 350px;
+}
