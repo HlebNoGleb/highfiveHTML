@@ -45,6 +45,8 @@ burger.addEventListener('click', () => {
     : burger.classList.toggle('active');
   wrapMenu.classList.toggle('open');
   body.classList.toggle('is-lock');
+  wrapSubmenu.classList.remove('open');
+  listSubmenu.classList.remove('open');
 });
 // MENU
 
@@ -52,8 +54,8 @@ const itemsMenu = document.querySelectorAll('.menu > li > p');
 const itemsSubmenu = document.querySelectorAll('.submenu > p');
 const itemsListSubmenu = document.querySelectorAll('.submenu > ul > li > p');
 const itemsTitleListSubmenu = document.querySelectorAll('.submenu div > p');
-const submenu = document.querySelector('.submenu');
-console.log(itemsSubmenu);
+const wrapSubmenu = document.querySelector('.wrap-submenu');
+const listSubmenu = document.querySelector('.submenu div');
 
 itemsMenu.forEach((item, i) => {
   item.addEventListener('click', () => {
@@ -62,19 +64,20 @@ itemsMenu.forEach((item, i) => {
       : '';
   });
 });
-itemsSubmenu.forEach((item, i) => {
+itemsSubmenu.forEach((item) => {
   item.addEventListener('click', () => {
-    item.parentElement.classList.remove('open');
+    item.parentElement.parentElement.classList.remove('open');
   });
 });
-itemsListSubmenu.forEach((item, i) => {
+itemsListSubmenu.forEach((item) => {
   item.addEventListener('click', () => {
+    console.log(item.nextElementSibling);
     item.nextElementSibling
       ? item.nextElementSibling.classList.add('open')
       : '';
   });
 });
-itemsTitleListSubmenu.forEach((item, i) => {
+itemsTitleListSubmenu.forEach((item) => {
   item.addEventListener('click', () => {
     item.parentElement.classList.remove('open');
   });
