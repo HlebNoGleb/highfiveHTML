@@ -1,10 +1,15 @@
 // tabs
 function initTabs(selector, config = {}) {
   const tabsContainer = document.querySelector(selector);
+
+  if (!tabsContainer) {
+    return;
+  }
+
   const buttonsContainer = tabsContainer.querySelector('[data-hf-tabs-buttons]');
   const contentContainer = tabsContainer.querySelector('[data-hf-tabs-content]');
 
-  if (!tabsContainer || !buttonsContainer || !contentContainer) {
+  if (!buttonsContainer || !contentContainer) {
     return;
   }
 
@@ -43,9 +48,14 @@ function initTabs(selector, config = {}) {
 
 function initAccordion(selector, config = {}) {
   const accordion = document.querySelector(selector);
+
+  if (!accordion) {
+    return;
+  }
+
   const items = accordion.querySelectorAll('[data-hf-accordion-item]');
 
-  if (!accordion || !items.length) {
+  if (!items.length) {
     return;
   }
 
