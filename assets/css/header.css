@@ -101,6 +101,7 @@ header .burger{
 
     .header-links >div {
         position: static;
+        margin-bottom: 20px;
     }
 
     header .header-links{
