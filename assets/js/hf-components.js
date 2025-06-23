@@ -90,11 +90,58 @@ function initAccordion(selector, config = {}) {
     setDefaultActiveTab(config.openFirst);
   });
 }
+
 window.hf = window.hf || {}
 window.hf.components = window.hf.components || {}
+
 window.hf.components.tabs = {
   init: initTabs
 }
+
 window.hf.components.accordion = {
   init: initAccordion
+}
+
+window.hf.components.menu = {
+  init: initMenu
+}
+
+function initMenu(selector, config = {
+  menuItemSelector: 'li a',
+  menuItemWrapperSelector: 'li',
+}) {
+  const menuContainer = document.querySelector(selector);
+
+  if (!menuContainer) {
+    return;
+  }
+
+  const menuItems = menuContainer.querySelectorAll(config.menuItemSelector);
+
+  if (!menuItems.length) {
+    return;
+  }
+
+  const addClickLogic = (item) => {
+    item.addEventListener('click', () => {
+      menuItems.forEach(i => {
+        if (!item.closest(`${config.menuItemWrapperSelector}.active`)) {
+          i.closest(config.menuItemWrapperSelector).classList.remove('active');
+        }
+      });
+      item.closest(config.menuItemWrapperSelector).classList.add('active');
+    });
+  };
+
+  menuItems.forEach((item) => {
+    addClickLogic(item);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!menuContainer.contains(event.target)) {
+      menuItems.forEach((item) => {
+        item.closest(config.menuItemWrapperSelector).classList.remove('active');
+      })
+    }
+  });
 }

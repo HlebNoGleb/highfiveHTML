@@ -13,3 +13,11 @@
 [data-hf-accordion-item="active"] [data-hf-accordion-item-body]{
     display: block;
 }
+
+[data-hf-menu="multilevel"] ul ul{
+    display: none;
+}
+
+[data-hf-menu="multilevel"] li.active > ul{
+    display: block;
+}

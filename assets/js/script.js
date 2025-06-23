@@ -16,6 +16,8 @@ window.hf.components.tabs.init('.packages', {
   openFirst: true,
 });
 
+window.hf.components.menu.init('.header-nav');
+
 const partners = new Swiper('.partners .swiper', {
   loop: true,
   slidesPerView: 1,
