@@ -1335,7 +1335,10 @@ form input:focus {
   flex-direction: column;
   gap: 32px;
 }
-
+.cases h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
 .case {
   background: var(--white);
   border-radius: 30px;

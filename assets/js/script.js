@@ -1,9 +1,12 @@
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  menu.classList.toggle('open');
-});
+if (burger && menu) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+}
+
 window.hf.components.tabs.init('.tabs1', {
   openFirst: true,
 });
@@ -23,6 +26,25 @@ window.hf.components.tabs.init('.packages', {
 });
 
 window.hf.components.menu.init('.menu');
+
+const steps = new Swiper('.steps .swiper', {
+  loop: true,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' +
+        className +
+        '"><span class="num">' +
+        0 +
+        (index + 1) +
+        "</span><span class='dot'></span></span>"
+      );
+    },
+  },
+});
 
 const partners = new Swiper('.partners .swiper', {
   loop: true,
