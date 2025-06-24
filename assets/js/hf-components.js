@@ -118,6 +118,9 @@ function initMenu(
   config = {
     menuItemSelector: 'li a',
     menuItemWrapperSelector: 'li',
+    subLinksWrapperSelector: 'ul',
+    buttonBackInject: true,
+    buttonBackHtml: '<button>Back</button>',
   }
 ) {
   const menuContainer = document.querySelector(selector);
@@ -134,12 +137,40 @@ function initMenu(
 
   const addClickLogic = (item) => {
     item.addEventListener('click', () => {
+      // remove active class
       menuItems.forEach((i) => {
         if (!item.closest(`${config.menuItemWrapperSelector}.active`)) {
           i.closest(config.menuItemWrapperSelector).classList.remove('active');
+          i.closest(config.menuItemWrapperSelector).querySelectorAll("[data-hf-menu-button-back]").forEach((buttonBack) => {
+            buttonBack.remove();
+          })
         }
       });
+
+      // add active class
       item.closest(config.menuItemWrapperSelector).classList.add('active');
+
+      // add previous link
+      if (item.closest(config.menuItemWrapperSelector).querySelector(config.subLinksWrapperSelector) && config.buttonBackInject) {
+
+        if (item.closest(config.menuItemWrapperSelector).querySelector('[data-hf-menu-button-back]')) {
+          return;
+        }
+
+        // create button back
+        const buttonBackContainer = document.createElement('div');
+        buttonBackContainer.setAttribute('data-hf-menu-button-back', '');
+        buttonBackContainer.innerHTML = config.buttonBackHtml;
+
+        // add click logic
+        buttonBackContainer.addEventListener('click', (e) => {
+          item.closest(config.menuItemWrapperSelector).classList.remove('active');
+          buttonBackContainer.remove();
+        });
+
+        //inject button back
+        item.closest(config.menuItemWrapperSelector).prepend(buttonBackContainer);
+      }
     });
   };
 
@@ -148,10 +179,21 @@ function initMenu(
   });
 
   document.addEventListener('click', function (event) {
-    if (!menuContainer.contains(event.target)) {
+    if (!menuContainer.contains(event.target) && event.target.innerHTML === config.buttonBackHtml) {
       menuItems.forEach((item) => {
         item.closest(config.menuItemWrapperSelector).classList.remove('active');
+        // const buttonBacks = item.closest(config.menuItemWrapperSelector).querySelectorAll('[data-hf-menu-button-back]');
+        // buttonBacks.forEach((buttonBack) => {
+        //   buttonBack.remove();
+        // });
       });
+
+      if (menuContainer.querySelector('[data-hf-menu-button-back]')) {
+        const buttonBacks = menuContainer.querySelectorAll('[data-hf-menu-button-back]');
+        buttonBacks.forEach((buttonBack) => {
+          buttonBack.remove();
+        });
+      }
     }
   });
 }
