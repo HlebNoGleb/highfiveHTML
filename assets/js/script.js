@@ -25,7 +25,12 @@ window.hf.components.tabs.init('.packages', {
   openFirst: true,
 });
 
-window.hf.components.menu.init('.menu');
+window.hf.components.menu.init('.menu', {
+  buttonBack:{
+    inject: true,
+    html: '<button>Back1111</button>',
+  }
+});
 
 const steps = new Swiper('.steps .swiper', {
   loop: true,
