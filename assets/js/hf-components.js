@@ -6,8 +6,12 @@ function initTabs(selector, config = {}) {
     return;
   }
 
-  const buttonsContainer = tabsContainer.querySelector('[data-hf-tabs-buttons]');
-  const contentContainer = tabsContainer.querySelector('[data-hf-tabs-content]');
+  const buttonsContainer = tabsContainer.querySelector(
+    '[data-hf-tabs-buttons]'
+  );
+  const contentContainer = tabsContainer.querySelector(
+    '[data-hf-tabs-content]'
+  );
 
   if (!buttonsContainer || !contentContainer) {
     return;
@@ -22,9 +26,9 @@ function initTabs(selector, config = {}) {
 
   const addClickLogic = (button, index) => {
     button.addEventListener('click', () => {
-      buttons.forEach(btn => btn.setAttribute('data-hf-tabs-button', ''));
-      button.setAttribute('data-hf-tabs-button', 'active')
-      tabs.forEach(tab => tab.setAttribute('data-hf-tab', ''));
+      buttons.forEach((btn) => btn.setAttribute('data-hf-tabs-button', ''));
+      button.setAttribute('data-hf-tabs-button', 'active');
+      tabs.forEach((tab) => tab.setAttribute('data-hf-tab', ''));
       tabs[index].setAttribute('data-hf-tab', 'active');
     });
   };
@@ -33,7 +37,9 @@ function initTabs(selector, config = {}) {
     if (!openFirst) {
       return;
     }
-    const activeButton = contentContainer.querySelector('[data-hf-button="active"]');
+    const activeButton = contentContainer.querySelector(
+      '[data-hf-button="active"]'
+    );
     if (!activeButton) {
       buttons[0].setAttribute('data-hf-tabs-button', 'active');
       tabs[0].setAttribute('data-hf-tab', 'active');
@@ -62,9 +68,8 @@ function initAccordion(selector, config = {}) {
   const addClickLogic = (button) => {
     const header = button.querySelector('[data-hf-accordion-item-header]');
     header.addEventListener('click', () => {
-
       if (config.closeOthers) {
-        items.forEach(i => i.setAttribute('data-hf-accordion-item', ''));
+        items.forEach((i) => i.setAttribute('data-hf-accordion-item', ''));
       }
 
       if (button.getAttribute('data-hf-accordion-item') === 'active') {
@@ -79,7 +84,9 @@ function initAccordion(selector, config = {}) {
     if (!openFirst) {
       return;
     }
-    const activeButton = accordion.querySelector('[data-hf-accordion-item="active"]');
+    const activeButton = accordion.querySelector(
+      '[data-hf-accordion-item="active"]'
+    );
     if (!activeButton) {
       items[0].setAttribute('data-hf-accordion-item', 'active');
     }
@@ -91,25 +98,28 @@ function initAccordion(selector, config = {}) {
   });
 }
 
-window.hf = window.hf || {}
-window.hf.components = window.hf.components || {}
+window.hf = window.hf || {};
+window.hf.components = window.hf.components || {};
 
 window.hf.components.tabs = {
-  init: initTabs
-}
+  init: initTabs,
+};
 
 window.hf.components.accordion = {
-  init: initAccordion
-}
+  init: initAccordion,
+};
 
 window.hf.components.menu = {
-  init: initMenu
-}
+  init: initMenu,
+};
 
-function initMenu(selector, config = {
-  menuItemSelector: 'li a',
-  menuItemWrapperSelector: 'li',
-}) {
+function initMenu(
+  selector,
+  config = {
+    menuItemSelector: 'li a',
+    menuItemWrapperSelector: 'li',
+  }
+) {
   const menuContainer = document.querySelector(selector);
 
   if (!menuContainer) {
@@ -124,7 +134,7 @@ function initMenu(selector, config = {
 
   const addClickLogic = (item) => {
     item.addEventListener('click', () => {
-      menuItems.forEach(i => {
+      menuItems.forEach((i) => {
         if (!item.closest(`${config.menuItemWrapperSelector}.active`)) {
           i.closest(config.menuItemWrapperSelector).classList.remove('active');
         }
@@ -141,7 +151,7 @@ function initMenu(selector, config = {
     if (!menuContainer.contains(event.target)) {
       menuItems.forEach((item) => {
         item.closest(config.menuItemWrapperSelector).classList.remove('active');
-      })
+      });
     }
   });
 }

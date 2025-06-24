@@ -1,208 +1,652 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./assets/css/hf-components.css" />
-  <link rel="stylesheet" href="./assets/css/header.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/ui.css" />
-</head>
-
-<body>
-
-
-  <header>
-    <div class="container">
-      <div class="logo" style="width: 150px; height: 50px; background-color: red; text-align: center;">LOGO</div>
-      <nav data-hf-menu="multilevel" class="header-nav">
-        <ul>
-          <li> <a href="#"> Level1 Link1 </a> </li>
-          <li> <a href="#"> Level1 Link2 </a> </li>
-          <li> <a href="#"> Level1 Link3 </a> </li>
-          <li> <a href="#"> Level1 Link4 </a>
-            <ul>
-              <li> <a href="#"> Level2 Link1 </a> </li>
-              <li> <a href="#"> Level2 Link2 </a> </li>
-              <li> <a href="#"> Level2 Link3 </a> </li>
-              <li> <a href="#"> Level2 Link4 </a> </li>
-              <li> <a href="#"> Level2 Link5 </a> </li>
-              <li> <a href="#"> Level2 Link6 </a> </li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/hf-components.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/ui.css" />
+  </head>
+  <body>
+    <!-- <header class="header">
+      <img src="./assets/images/logo.svg" alt="HIGH FIVE" />
+      <button title="Burger" type="button" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="menu">
+        <ul class="menu__list" >
+          <li class="menu__item">
+            <a href="" class="menu__link">Услуги</a>
+            <div class="submenu">
+              <p class="submenu__title gradient-text">Услуги</p>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                  <div class="nested-menu">
+                    <p class="nested-menu__title gradient-text">CRM</p>
+                    <ul class="nested-menu__list">
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li> <a href="#"> Level1 Link5 </a>
-            <ul>
-              <li> <a href="#"> Level2 Link7 </a> </li>
-              <li> <a href="#"> Level2 Link8 </a> </li>
-              <li>
-                <a href="#"> Level2 Link9 </a>
-                  <ul>
-                    <li> <a href="#"> Level3 Link1 </a> </li>
-                    <li> <a href="#"> Level3 Link2 </a> </li>
-                    <li> <a href="#"> Level3 Link3 </a> </li>
-                    <li> <a href="#"> Level3 Link4 </a> </li>
-                    <li> <a href="#"> Level3 Link5 </a> </li>
-                    <li> <a href="#"> Level3 Link6 </a> </li>
-                  </ul>
-              </li>
-            </ul>
+          <li class="menu__item">
+            <a href="" class="menu__link">Кейсы</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Мероприятия</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Блог</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Контакты</a>
+            <div class="submenu">
+              <p class="submenu__title gradient-text">Услуги</p>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                  <div class="nested-menu">
+                    <p class="nested-menu__title gradient-text">CRM</p>
+                    <ul class="nested-menu__list">
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                      <li class="nested-menu__item">
+                        <a href="" class="nested-menu__link"
+                          >Комплексное внедрение amoCRM</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="" class="submenu__link">CRM</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
-      </nav>
-      <div class="burger" style="width: 150px; height: 50px; background-color: red; text-align: center;">Burger</div>
-    </div>
-  </header>
-  <main class="main">
-    <section class="hero">
-      <div class="container">
-        <div class="row">
-          <h1 class="gradient-text">
-            <span>HighFive</span>
-            <span>Digital-агентство</span>
-          </h1>
+      </div>
+    </header> -->
 
-          <p class="subtitle">Помогаем бизнесу расти</p>
-          <p class="text">
-            Автоматизируем отделы продаж и HR, оцифровываем клиентский сервис.
-            Создаем цифровые продукты: B2B-порталы, кабинеты, сайты.
+     <div class="container">
+        <div
+          class="logo"
+          style="
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+          "
+        >
+          LOGO
+        </div>
+        <nav data-hf-menu="multilevel" class="menu">
+          <ul>
+            <li><a href="#"> Level1 Link1 </a></li>
+            <li><a href="#"> Level1 Link2 </a></li>
+            <li><a href="#"> Level1 Link3 </a></li>
+            <li>
+              <a href="#"> Level1 Link4 </a>
+              <ul>
+                <li><a href="#"> Level2 Link1 </a></li>
+                <li><a href="#"> Level2 Link2 </a></li>
+                <li><a href="#"> Level2 Link3 </a></li>
+                <li><a href="#"> Level2 Link4 </a></li>
+                <li><a href="#"> Level2 Link5 </a></li>
+                <li><a href="#"> Level2 Link6 </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"> Level1 Link5 </a>
+              <ul>
+                <li><a href="#"> Level2 Link7 </a></li>
+                <li><a href="#"> Level2 Link8 </a></li>
+                <li>
+                  <a href="#"> Level2 Link9 </a>
+                  <ul>
+                    <li><a href="#"> Level3 Link1 </a></li>
+                    <li><a href="#"> Level3 Link2 </a></li>
+                    <li><a href="#"> Level3 Link3 </a></li>
+                    <li><a href="#"> Level3 Link4 </a></li>
+                    <li><a href="#"> Level3 Link5 </a></li>
+                    <li><a href="#"> Level3 Link6 </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="burger"
+          style="
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+          "
+        >
+          Burger
+        </div>
+      </div>
+
+    <!-- <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="row">
+            <h1 class="gradient-text">
+              <span>HighFive</span>
+              <span>Digital-агентство</span>
+            </h1>
+
+            <p class="subtitle">Помогаем бизнесу расти</p>
+            <p class="text">
+              Автоматизируем отделы продаж и HR, оцифровываем клиентский сервис.
+              Создаем цифровые продукты: B2B-порталы, кабинеты, сайты.
+            </p>
+            <button class="button gradient-button">Узнать больше</button>
+            <img src="./assets/images/hero.png" alt="CRM" />
+          </div>
+        </div>
+      </section> -->
+
+      <!-- CASES -->
+
+      <section class="cases">
+        <div class="container">
+          <div class="row">
+            <div class="case">
+              <h3 class="gradient-text">Внедрение CRM систем</h3>
+              <ul class="case-tags">
+                <li>CRM</li>
+                <li>Аналитика</li>
+                <li>CRM</li>
+                <li>Аналитика</li>
+                <li>Аналитика</li>
+                <li>Аналитика</li>
+                <li>Аналитика</li>
+              </ul>
+              <div class="case__img">
+                <img src="assets/images/steps.jpg" alt="" class="case-image" />
+              </div>
+            </div>
+            <div class="case">
+              <h3 class="gradient-text">Внедрение CRM систем</h3>
+              <ul class="case-tags">
+                <li>CRM</li>
+                <li>Аналитика</li>
+                <li>CRM</li>
+                <li>Аналитика</li>
+              </ul>
+
+              <div class="case__img">
+                <img src="assets/images/steps.jpg" alt="" class="case-image" />
+              </div>
+            </div>
+            <div class="case">
+              <h3 class="gradient-text">Внедрение CRM систем</h3>
+              <ul class="case-tags">
+                <li>CRM</li>
+                <li>Аналитика</li>
+                <li>CRM</li>
+                <li>Аналитика</li>
+              </ul>
+
+              <div class="case__img">
+                <img src="assets/images/steps.jpg" alt="" class="case-image" />
+              </div>
+            </div>
+            <div class="case">
+              <h3 class="gradient-text">Внедрение CRM систем</h3>
+              <ul class="case-tags">
+                <li>CRM</li>
+                <li>Аналитика</li>
+                <li>CRM</li>
+                <li>Аналитика</li>
+              </ul>
+
+              <div class="case__img">
+                <img src="assets/images/steps.jpg" alt="" class="case-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PARTNERS -->
+      <section class="partners">
+        <div class="container">
+          <div class="row">
+            <h2 class="gradient-text">Наши партнеры</h2>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/partners/webflow.svg"
+                    alt="Webflow"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/partners/webflow.svg"
+                    alt="Webflow"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/partners/relume.svg" alt="Relume" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/partners/webflow.svg"
+                    alt="Webflow"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/partners/relume.svg" alt="Relume" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/partners/webflow.svg"
+                    alt="Webflow"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/partners/relume.svg" alt="Relume" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FORM -->
+      <section class="form container">
+        <div class="form-content">
+          <h3 class="gradient-text">Отправьте заявку</h3>
+          <p>
+            Отправьте заявку Автоматизируем бизнес процессы в компании,
+            подключаем каналы коммуникаций, настраиваем интеграции с внешними
+            сервисами и обучаем.
           </p>
-          <button class="button gradient-button">Узнать больше</button>
-          <img src="./assets/images/hero.png" alt="CRM" />
+          <form>
+            <label for="mail">
+              <p>Почта</p>
+              <input type="text" id="mail" placeholder="email@gmail.com" />
+            </label>
+            <label for="phone">
+              <p>Телефон</p>
+              <input type="text" id="phone" />
+            </label>
+            <button type="submit" class="button gradient-button">
+              Отправить заявку
+            </button>
+          </form>
         </div>
-      </div>
-    </section>
-
-    <!-- CASES -->
-
-    <section class="cases">
-      <div class="container">
-        <div class="row">
-          <div class="case">
-            <h3 class="gradient-text">Внедрение CRM систем</h3>
-            <ul class="case-tags">
-              <li>CRM</li>
-              <li>Аналитика</li>
-              <li>CRM</li>
-              <li>Аналитика</li>
-              <li>Аналитика</li>
-              <li>Аналитика</li>
-              <li>Аналитика</li>
-            </ul>
-            <div class="case__img">
-              <img src="assets/images/steps.jpg" alt="" class="case-image" />
-            </div>
-          </div>
-          <div class="case">
-            <h3 class="gradient-text">Внедрение CRM систем</h3>
-            <ul class="case-tags">
-              <li>CRM</li>
-              <li>Аналитика</li>
-              <li>CRM</li>
-              <li>Аналитика</li>
-            </ul>
-
-            <div class="case__img">
-              <img src="assets/images/steps.jpg" alt="" class="case-image" />
-            </div>
-          </div>
-          <div class="case">
-            <h3 class="gradient-text">Внедрение CRM систем</h3>
-            <ul class="case-tags">
-              <li>CRM</li>
-              <li>Аналитика</li>
-              <li>CRM</li>
-              <li>Аналитика</li>
-            </ul>
-
-            <div class="case__img">
-              <img src="assets/images/steps.jpg" alt="" class="case-image" />
-            </div>
-          </div>
-          <div class="case">
-            <h3 class="gradient-text">Внедрение CRM систем</h3>
-            <ul class="case-tags">
-              <li>CRM</li>
-              <li>Аналитика</li>
-              <li>CRM</li>
-              <li>Аналитика</li>
-            </ul>
-
-            <div class="case__img">
-              <img src="assets/images/steps.jpg" alt="" class="case-image" />
-            </div>
-          </div>
+        <div class="form-img">
+          <img src="./assets/images/form-img.jpg" alt="Отправить заявку" />
         </div>
-      </div>
-    </section>
-    <!-- PARTNERS -->
-    <section class="partners">
-      <div class="container">
-        <div class="row">
-          <h2 class="gradient-text">Наши партнеры</h2>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/webflow.svg" alt="Webflow" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/webflow.svg" alt="Webflow" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/relume.svg" alt="Relume" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/webflow.svg" alt="Webflow" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/relume.svg" alt="Relume" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/webflow.svg" alt="Webflow" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/partners/relume.svg" alt="Relume" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- FORM -->
-    <section class="form container">
-      <div class="form-content">
-        <h3 class="gradient-text">Отправьте заявку</h3>
-        <p>
-          Отправьте заявку Автоматизируем бизнес процессы в компании,
-          подключаем каналы коммуникаций, настраиваем интеграции с внешними
-          сервисами и обучаем.
-        </p>
-        <form>
-          <label for="mail">
-            <p>Почта</p>
-            <input type="text" id="mail" placeholder="email@gmail.com" />
-          </label>
-          <label for="phone">
-            <p>Телефон</p>
-            <input type="text" id="phone" />
-          </label>
-          <button type="submit" class="button gradient-button">
-            Отправить заявку
-          </button>
-        </form>
-      </div>
-      <div class="form-img">
-        <img src="./assets/images/form-img.jpg" alt="Отправить заявку" />
-      </div>
-    </section>
-  </main>
-  <footer>FOOTER</footer>
-  <a href="ui.html" class="ui">UI</a>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./assets/js/hf-components.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
-
+      </section>
+    </main>
+    <footer>FOOTER</footer>
+    <a href="ui.html" class="ui">UI</a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/hf-components.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
