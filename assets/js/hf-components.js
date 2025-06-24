@@ -120,7 +120,7 @@ function initMenu(
     menuItemWrapperSelector: 'li',
     subLinksWrapperSelector: 'ul',
     buttonBackInject: true,
-    buttonBackHtml: '<button>Back</button>',
+    buttonBackHtml: '<button>Назад</button>',
   }
 ) {
   const menuContainer = document.querySelector(selector);
@@ -141,9 +141,11 @@ function initMenu(
       menuItems.forEach((i) => {
         if (!item.closest(`${config.menuItemWrapperSelector}.active`)) {
           i.closest(config.menuItemWrapperSelector).classList.remove('active');
-          i.closest(config.menuItemWrapperSelector).querySelectorAll("[data-hf-menu-button-back]").forEach((buttonBack) => {
-            buttonBack.remove();
-          })
+          i.closest(config.menuItemWrapperSelector)
+            .querySelectorAll('[data-hf-menu-button-back]')
+            .forEach((buttonBack) => {
+              buttonBack.remove();
+            });
         }
       });
 
@@ -151,9 +153,17 @@ function initMenu(
       item.closest(config.menuItemWrapperSelector).classList.add('active');
 
       // add previous link
-      if (item.closest(config.menuItemWrapperSelector).querySelector(config.subLinksWrapperSelector) && config.buttonBackInject) {
-
-        if (item.closest(config.menuItemWrapperSelector).querySelector('[data-hf-menu-button-back]')) {
+      if (
+        item
+          .closest(config.menuItemWrapperSelector)
+          .querySelector(config.subLinksWrapperSelector) &&
+        config.buttonBackInject
+      ) {
+        if (
+          item
+            .closest(config.menuItemWrapperSelector)
+            .querySelector('[data-hf-menu-button-back]')
+        ) {
           return;
         }
 
@@ -164,12 +174,22 @@ function initMenu(
 
         // add click logic
         buttonBackContainer.addEventListener('click', (e) => {
-          item.closest(config.menuItemWrapperSelector).classList.remove('active');
+          console.log(e.target);
+          console.log(
+            e.target.closest(`${config.menuItemWrapperSelector}.active`)
+          );
+
+          e.target
+            .closest(`${config.menuItemWrapperSelector}.active`)
+            .classList.remove('active');
           buttonBackContainer.remove();
         });
 
         //inject button back
-        item.closest(config.menuItemWrapperSelector).prepend(buttonBackContainer);
+        item
+          .closest(config.menuItemWrapperSelector)
+          .querySelector(config.subLinksWrapperSelector)
+          .after(buttonBackContainer);
       }
     });
   };
@@ -178,22 +198,25 @@ function initMenu(
     addClickLogic(item);
   });
 
-  document.addEventListener('click', function (event) {
-    if (!menuContainer.contains(event.target) && event.target.innerHTML === config.buttonBackHtml) {
-      menuItems.forEach((item) => {
-        item.closest(config.menuItemWrapperSelector).classList.remove('active');
-        // const buttonBacks = item.closest(config.menuItemWrapperSelector).querySelectorAll('[data-hf-menu-button-back]');
-        // buttonBacks.forEach((buttonBack) => {
-        //   buttonBack.remove();
-        // });
-      });
+  // document.addEventListener('click', function (event) {
+  //   console.log(event.target, config.buttonBackHtml);
+  //   if (!menuContainer.contains(event.target)) {
+  //     menuItems.forEach((item) => {
+  //       item.closest(config.menuItemWrapperSelector).classList.remove('open');
+  //       // const buttonBacks = item.closest(config.menuItemWrapperSelector).querySelectorAll('[data-hf-menu-button-back]');
+  //       // buttonBacks.forEach((buttonBack) => {
+  //       //   buttonBack.remove();
+  //       // });
+  //     });
 
-      if (menuContainer.querySelector('[data-hf-menu-button-back]')) {
-        const buttonBacks = menuContainer.querySelectorAll('[data-hf-menu-button-back]');
-        buttonBacks.forEach((buttonBack) => {
-          buttonBack.remove();
-        });
-      }
-    }
-  });
+  //     if (menuContainer.querySelector('[data-hf-menu-button-back]')) {
+  //       const buttonBacks = menuContainer.querySelectorAll(
+  //         '[data-hf-menu-button-back]'
+  //       );
+  //       buttonBacks.forEach((buttonBack) => {
+  //         buttonBack.remove();
+  //       });
+  //     }
+  //   }
+  // });
 }

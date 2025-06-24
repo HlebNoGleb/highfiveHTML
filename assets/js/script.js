@@ -26,10 +26,11 @@ window.hf.components.tabs.init('.packages', {
 });
 
 window.hf.components.menu.init('.menu', {
-  buttonBack:{
-    inject: true,
-    html: '<button>Back1111</button>',
-  }
+  menuItemSelector: 'li a',
+  menuItemWrapperSelector: 'li',
+  subLinksWrapperSelector: 'ul',
+  buttonBackInject: true,
+  buttonBackHtml: '<button class="button link-button back">Назад</button>',
 });
 
 const steps = new Swiper('.steps .swiper', {
