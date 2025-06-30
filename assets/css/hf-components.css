@@ -18,21 +18,21 @@
   display: none;
 }
 
-[data-hf-menu="multilevel"] li.active{
-    padding: 20px;
-    border: 2px solid green;
+[data-hf-menu='multilevel'] li.active {
+  padding: 20px;
+  border: 2px solid green;
 }
 
-[data-hf-menu="multilevel"] li.active > ul{
-    display: block;
+[data-hf-menu='multilevel'] li.active > ul {
+  display: block;
 }
 
-[data-hf-menu="multilevel"] ul{
-    padding: 20px;
-    border: 2px solid red;
+[data-hf-menu='multilevel'] ul {
+  padding: 20px;
+  border: 2px solid red;
 }
 
-[data-hf-menu="multilevel"] a{
-    min-width: 200px;
-    display: block;
+[data-hf-menu='multilevel'] a {
+  min-width: 200px;
+  display: block;
 }

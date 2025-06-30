@@ -16,9 +16,9 @@ window.hf.components.accordion.init('.accordion1', {
   openFirst: true,
 });
 
-window.hf.components.accordion.init('.accordion2', {
+window.hf.components.accordion.init('.faq', {
   closeOthers: true,
-  openFirst: true,
+  openFirst: false,
 });
 
 window.hf.components.tabs.init('.packages', {
