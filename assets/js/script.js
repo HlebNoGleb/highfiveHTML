@@ -7,17 +7,17 @@ if (burger && menu) {
   });
 }
 
-window.hf.components.tabs.init('.tabs1', {
+window.hf.components.tabs.init('.tabs', {
   openFirst: true,
 });
 
-window.hf.components.accordion.init('.accordion1', {
+window.hf.components.accordion.init('.tabs', {
   closeOthers: true,
   openFirst: true,
 });
 
 window.hf.components.accordion.init('.faq', {
-  closeOthers: true,
+  closeOthers: false,
   openFirst: false,
 });
 
@@ -35,7 +35,8 @@ window.hf.components.menu.init('.menu', {
 
 const steps = new Swiper('.steps .swiper', {
   loop: true,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 32,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
