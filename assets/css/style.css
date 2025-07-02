@@ -184,6 +184,18 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.purple {
+  color: #ff04ea !important;
+  background: rgba(255, 4, 234, 0.08) !important;
+}
+.yellow {
+  color: #ffbf00 !important;
+  background: rgba(255, 191, 0, 0.08) !important;
+}
+.blue {
+  color: #5404ff !important;
+  background: rgba(84, 4, 255, 0.08) !important;
+}
 .gray-text {
   color: var(--gray);
 }
@@ -214,6 +226,24 @@ h6 {
 }
 .head p {
   font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .head {
+    flex-direction: row;
+    margin-bottom: 70px;
+  }
+  .head h2 {
+    width: 50%;
+  }
+  .head p {
+    width: 50%;
+    font-size: 2rem;
+  }
+  .flex-end {
+    align-self: flex-end;
+    margin-bottom: -50px;
+  }
 }
 .text-center {
   text-align: center;
@@ -653,7 +683,16 @@ h6 {
 .nested-menu__link:hover {
   text-decoration: underline;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .nested-menu {
+    display: none;
+  }
+  .submenu__item.active > .nested-menu {
+    display: block;
+  }
+  .menu__link {
+    padding: 10px;
+  }
   [data-hf-menu-button-back] {
     display: none;
   }
@@ -676,6 +715,7 @@ h6 {
   .menu__item {
     position: relative;
     z-index: 100;
+    cursor: pointer;
   }
   .menu__list {
     max-width: 100%;
@@ -689,33 +729,35 @@ h6 {
   }
   .submenu {
     transform: none;
-    width: 600px;
+    width: 500px;
     height: 300px;
     top: 70px;
     bottom: auto;
     border-radius: 20px;
     gap: 20px;
-    display: none;
+    display: flex;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 10px 0px;
+    transition: var(--transition);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .menu__item:last-of-type > .submenu {
+    right: 0;
+    left: auto;
   }
   .submenu::before {
     content: '';
-    height: 100%;
     width: 100%;
     position: absolute;
     left: 0;
     right: 0;
-    top: -28px;
     bottom: 0;
-    z-index: -100;
+    z-index: -1000;
+    top: -30px;
   }
   .menu__item:hover > .submenu {
-    display: flex;
-  }
-  .menu__item:last-of-type:hover > .submenu {
-    display: flex;
-    right: 0;
-    left: auto;
+    opacity: 1;
+    visibility: visible;
   }
   .submenu__list {
     width: 40%;
@@ -755,6 +797,14 @@ h6 {
   }
   .nested-menu__link {
     padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .menu__link {
+    padding: 10px 20px;
+  }
+  .submenu {
+    width: 600px;
   }
 }
 /* END MENU */
@@ -804,7 +854,7 @@ h6 {
 .hero .text {
   color: var(--gray);
   margin-bottom: 20px;
-  max-width: 460px;
+  max-width: 450px;
 }
 @media (min-width: 768px) {
   .hero h1 span:last-child {
@@ -861,6 +911,12 @@ h6 {
   min-height: 500px;
   padding: 20px;
 }
+.projects__item h3 {
+  max-width: 330px;
+}
+.projects__item p {
+  max-width: 450px;
+}
 .projects__item img {
   height: 400px;
   object-fit: cover;
@@ -874,8 +930,6 @@ h6 {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 1.8rem;
-}
-.projects__item a {
 }
 @media (min-width: 992px) {
   .projects {
@@ -899,12 +953,6 @@ h6 {
   }
   .projects__item:nth-child(3n + 1) {
     min-height: 560px;
-  }
-  .projects__item:nth-child(3n + 1) p {
-    max-width: 50%;
-  }
-  .projects__item:nth-child(3n + 1) .projects__content {
-    max-width: 50%;
   }
   .projects__item:nth-child(3n + 1) {
     width: 100%;
@@ -1101,7 +1149,6 @@ h6 {
   font-weight: 500;
   color: #000;
 }
-
 /* PARTNERS */
 .partners {
   padding: 50px 0;
@@ -1214,12 +1261,6 @@ form input:focus {
   }
   .form-img {
     max-height: 100%;
-  }
-  .nested-menu {
-    display: none;
-  }
-  .submenu__item.active > .nested-menu {
-    display: block;
   }
 }
 /* END FORM */
@@ -1578,7 +1619,7 @@ form input:focus {
 }
 .cases .row {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .case {
@@ -1590,6 +1631,7 @@ form input:focus {
   position: relative;
   padding: 20px;
   gap: 30px;
+  width: 100%;
 }
 
 .case h3 {
@@ -1624,7 +1666,7 @@ form input:focus {
   width: 100%;
   object-fit: cover;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .cases {
     padding-top: 50px;
     padding-bottom: 150px;
@@ -1636,9 +1678,13 @@ form input:focus {
   .case:nth-child(even) {
     transform: translateY(100px);
   }
-  .cases .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+  .case {
+    width: calc(50% - 15px);
+  }
+}
+@media (min-width: 992px) {
+  .cases {
+    padding-top: 50px;
+    padding-bottom: 150px;
   }
 }
