@@ -52,18 +52,3 @@ const steps = new Swiper('.steps .swiper', {
     },
   },
 });
-
-const partners = new Swiper('.partners .swiper', {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 32,
-  grabCursor: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 6,
-    },
-  },
-});
